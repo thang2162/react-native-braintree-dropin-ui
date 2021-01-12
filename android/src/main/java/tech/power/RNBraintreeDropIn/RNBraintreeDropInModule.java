@@ -71,6 +71,10 @@ public class RNBraintreeDropInModule extends ReactContextBaseJavaModule {
         dropInRequest.disableGooglePayment();
     }
 
+    if(options.getBoolean("paypal") == false){
+      dropInRequest.disablePayPal();
+    }
+
     // if(options.hasKey("cardDisabled")) {
     //   dropInRequest.disableCard();
     // }

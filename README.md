@@ -3,8 +3,8 @@
 > React Native integration of Braintree Drop-in for IOS & ANDROID (Apple Pay, Google Pay, Paypal, Venmo, Credit Card)
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/wgltony/react-native-braintree-dropin-ui/master/node_modules/iphone.png" width="250">
-<img src="https://raw.githubusercontent.com/wgltony/react-native-braintree-dropin-ui/master/node_modules/android.png" width="250">
+<img src="https://raw.githubusercontent.com/thang2162/react-native-braintree-dropin-ui/master/node_modules/iphone.png" width="250">
+<img src="https://raw.githubusercontent.com/thang2162/react-native-braintree-dropin-ui/master/node_modules/android.png" width="250">
 </p>
 
 ## Getting started
@@ -13,7 +13,7 @@ For React Native versions >= 0.60
 
 IOS
 ```bash
-npm install react-native-braintree-dropin-ui --save
+npm install @thang2162/react-native-braintree-dropin-ui --save
 
 cd ./ios
 pod install
@@ -21,7 +21,7 @@ pod install
 
 Android
 ```bash
-npm install react-native-braintree-dropin-ui --save
+npm install @thang2162/eact-native-braintree-dropin-ui --save
 ```
 
 ## Configurate Payment Method(For ALL RN VERSIONS)
@@ -88,7 +88,7 @@ To enable paypal payments in iOS, you will need to add `setReturnURLScheme` to `
 
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [BTAppSwitch setReturnURLScheme:@"com.your-company-name.your-app-name.payments"]; // ADD THIS LINE 
+    [BTAppSwitch setReturnURLScheme:@"com.your-company-name.your-app-name.payments"]; // ADD THIS LINE
     return YES;
 }
 ```
@@ -283,6 +283,7 @@ BraintreeDropIn.show({
   orderTotal:'Total Price',
   googlePay: true,
   applePay: true,
+  paypal: true,
   vaultManager: true,
   cardDisabled: false,
   darkTheme: true,
